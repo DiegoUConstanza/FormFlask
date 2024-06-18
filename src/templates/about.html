@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{%block title%}About{%endblock%}
+{%block content%}
+<div class="container">
+    <h1>Acerca de nosotros</h1><br>
+    <p class="text-gray-300">Somos una empresa que se dedica a la venta de productos de tecnología. Nuestro objetivo es ofrecer productos de calidad a precios accesibles. Contamos con un equipo de profesionales que se encargan de seleccionar los mejores productos del mercado para nuestros clientes. Si tienes alguna duda o sugerencia, no dudes en contactarnos.</p>
+    <br>
+
+    <h2 class="text-gray-300">Acerca de Usted</h2>
+        {%if name != None and date == None%}
+        <p>Bienvenido, tu nombre es: {{name | upper}}</p>
+        {%elif name != None and date != None%}
+        <p>Bienvenido, tu nombre es: {{name | upper}} y {{calcularEdad(date)}}</p>
+        {%else%}
+        <p>Ingresa valores para poder conocerte en la ruta!</p>
+        {%endif%}
+
+</div>
+{%endblock%}

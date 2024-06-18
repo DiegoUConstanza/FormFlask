@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%block title%}Principal{%endblock%}
+
+{% block content %}
+<div class="container">
+    <h1>Bienvenido al Login tonoto</h1> <br>
+    <p>Aqui deberia ir todo lo relacionado al login, medio estructurado como tal.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum at ipsa consectetur doloribus, facere amet totam dicta officia sunt nemo, enim possimus repellendus laboriosam, sint tenetur rem veniam. Architecto, ratione?
+    </p>
+    <br><hr><br>
+    <h2>El dia de hoy es:</h2>
+    <p>{{date | today}}</p>
+    <br><hr><br>
+    <h2>Lista de tonotos:</h2>
+    <ul>
+        {% for tonto in tontos %}
+            <li>{{tonto}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

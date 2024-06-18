@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{% block title %} Login {% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Este es el login con HTML puro</h1>
+    <form action="" method="post">
+        <label for="username">Nombre de usuario</label>
+        <input type="text" name="username" id="username" required><br>
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password" required><br>
+        <input type="submit" value="Ingresar" class="boton"><br>
+    </form>
+    <p>No tienes una cuenta? <a href="{{url_for('register')}}">Haz click aqui!</a></p><br>
+    {% if user %}
+        <p>Uste ingreso con el nombre: {{user.username}} y contraseña: {{user.password}}</p>
+    {% endif %}
+    <br>
+    {% if error %}
+    <div class="error">
+        <p>{{error}}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

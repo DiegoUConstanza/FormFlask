@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Admin Logeado{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Este es el panel de administrador</h1>
+    <p>Este es el panel de administrador, aqui se pueden hacer cosas como:</p>
+    <ul>
+        <li>Crear usuarios</li>
+        <li>Eliminar usuarios</li>
+        <li>Editar usuarios</li>
+        <li>Ver usuarios</li>
+    </ul><br>
+    <p>Bienvenido {{userLoged.username}} con contraseña {{userLoged.password}}</p>
+</div>
+<script src="{{url_for('static', filename='auth.js')}}"></script>
+{% endblock %}

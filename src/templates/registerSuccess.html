@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Registro Realizad{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Registro Realizado</h1>
+    <p>Gracias por registrarte en nuestro sitio web</p> <br>
+
+    <h2>Sus datos son los siguientes</h2>
+    <p>Nombre: {{userData['username']}}</p>
+    <p>Apellido: {{userData['lastname']}}</p>
+    <p>Contraseña: {{userData['password']}}</p>
+    <p>Email: {{userData['email']}}</p>
+    <p>Numero de telefono: {{userData['phoneNumber']}}</p>
+
+</div>
+{% endblock %}

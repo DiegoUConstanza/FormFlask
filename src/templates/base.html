@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+  </head>
+  <nav>
+    <div class = "hidden md:flex bg-slate-600 text-gray-300 p-10 font-bold">
+      <a href="{{url_for('index')}}" class="hover:text-gray-100">Home</a>
+      <a href="{{url_for('about',name='Nombre')}}" class="hover:text-gray-100">About</a>
+      <a href="{{url_for('login')}}" class="hover:text-gray-100">Login</a>
+      <a href="{{url_for('register')}}" class="hover:text-gray-100">Registro</a>
+    </div class = >
+  </nav>
+  <body class="bg-slate-400">
+    <div class="bg-slate-400 p-10">
+      {% block content %}
+      
+      {% endblock %}
+    </div>
+  </body>
+</html>
